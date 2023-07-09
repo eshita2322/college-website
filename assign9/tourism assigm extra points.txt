@@ -1,0 +1,7 @@
+include a tourist enquiry form where the tourist ask about 
+1)the room types(if else)
+2)food facility
+3)site seeing options
+4)rental car facilities
+ *keep yes no options in it.
+ whenever user ask the information name of the user and contact and no of guest coming from the user.

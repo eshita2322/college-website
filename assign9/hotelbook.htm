@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <title>hotel booking</title>
+</head>
+
+<body>
+    <form style="text-align:center; border: 2px double purple;width:605px;margin:0 auto;">
+        <div style=" background-color: rgb(195, 207, 183);">
+            <h1 style="text-align: center;color: rgb(103, 50, 79);font-family: cursive;">INDIGO TOWER </h1>
+        </div>
+        <fieldset style="border: 2px solid red;width:505px;margin:0 auto; text-align:left ">
+
+            <font face="Microsoft YaHei UI" color="blue" size="2">
+                <label>First name:</label>
+                <input type="text" required>
+                <br>
+                <br>
+                <label>Last name:</label>
+                <input type="text" required>
+                <br>
+                <br>
+                <label> Address:</label>
+                <textarea rows="4" cols="50" required></textarea>
+
+                <br>
+                <br>
+                <label>City:</label>
+                <input type="text" required>
+                <br>
+                <br>
+                <label>State:</label>
+                <input type="text" size="10" required>
+                <br>
+                <br>
+                <label>Zip Code:</label>
+                <input type="text" size="10" required>
+                <br>
+                <br>
+                <label>Phone number</label>
+                <input type="text" value="+91" size="1" readonly>
+                <input type="tel" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+                <br>
+                <br>
+                <label>Email address:</label>
+                <input type="email" required>
+                <br>
+                <br>
+                <label>Check-in date:</label>
+                <input type="date" required>
+
+                <label>Check-in time:</label>
+                <input type="time" required>
+                <br>
+                <br>
+                <label>Check-out date:</label>
+                <input type="date" required>
+
+                <label>Check-out time:</label>
+                <input type="time" required>
+                <br>
+                <BR>
+                <label for="room-type">Choose a room type:</label>
+                <select id="room-type">
+                          <option value="default">--Select--</option>
+                          <option value="standard">Standard</option>
+                          <option value="deluxe">Deluxe</option>
+                          <option value="suite">Suite</option>
+                          <option value="exclusive">Exclusive</option>
+                        </select>
+
+
+
+
+
+                <span id="result"></span>
+                <script>
+                    const roomType = document.getElementById("room-type");
+                    const result = document.getElementById("result");
+
+                    function displayResult() {
+                        if (roomType.value === "default") {
+                            result.textContent = "";
+                        } else if (roomType.value === "standard") {
+                            result.textContent = "You have selected a Standard room.";
+                        } else if (roomType.value === "deluxe") {
+                            result.textContent = "You have selected a Deluxe room.";
+                        } else if (roomType.value === "suite") {
+                            result.textContent = "You have selected a Suite room.";
+                        } else if (roomType.value === "exclusive") {
+                            result.textContent = "You have selected an Exclusive room.";
+                        }
+                    }
+
+                    displayResult();
+
+                    roomType.onchange = displayResult;
+                </script>
+                <br>
+                <br> Adults:
+                <input list="adults" size="10" required>
+                <datalist id="adults" aria-readonly="">
+        <option value="1"></option>
+        <option value="2"></option>
+        <option value="3"></option>
+        <option value="4"></option>
+    </datalist>
+                <br>
+                <br> Children
+                <select>
+        <option selected></option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+            </font>
+            <br>
+            <br>
+            <input type="checkbox" required>I agree to submit these details
+            <br>
+            <br>
+            <input type="submit"> &nbsp; &nbsp; &nbsp;
+            <input type="reset">
+        </fieldset>
+        <bR>
+    </form>
+
+
+
+</body>
+
+</html>

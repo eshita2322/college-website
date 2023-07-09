@@ -1,0 +1,32 @@
+<label for="room-type">Choose a room type:</label>
+<select id="room-type">
+  <option value="default">--Select--</option>
+  <option value="standard">Standard</option>
+  <option value="deluxe">Deluxe</option>
+  <option value="suite">Suite</option>
+  <option value="exclusive">Exclusive</option>
+</select>
+
+<br><br>
+
+<label for="result">Result:</label>
+<input type="text" id="result" readonly>
+
+<script>
+  const roomType = document.getElementById("room-type");
+  const result = document.getElementById("result");
+
+  roomType.addEventListener("change", function() {
+    if (roomType.value === "default") {
+      result.value = "";
+    } else if (roomType.value === "standard") {
+      result.value = "You have selected a Standard room.";
+    } else if (roomType.value === "deluxe") {
+      result.value = "You have selected a Deluxe room.";
+    } else if (roomType.value === "suite") {
+      result.value = "You have selected a Suite room.";
+    } else if (roomType.value === "exclusive") {
+      result.value = "You have selected an Exclusive room.";
+    }
+  });
+</script>
